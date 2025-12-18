@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartHealth — Advanced Health Tracker</title>
+<meta name="description" content="SmartHealth — AI-powered health tracking with live demo, interactive charts, and futuristic neon design.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">SH</div>
+    <div>
+      <h1>SmartHealth</h1>
+      <p>AI · Wellness · Insights</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#demo">Demo</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact" class="btn-header">Get Started</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-text">
+      <h1 class="neon">Take Control of Your Health</h1>
+      <p>Track heart rate, sleep, steps, calories, and receive AI-powered insights—all in real-time.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary" id="heroDemoBtn">Try Demo</button>
+        <button class="btn-secondary">Download App</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features fadeUp">
+    <h2 class="neon">Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="none" stroke="#06b6d4" stroke-width="4" d="M32 12c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20z"/><path fill="none" stroke="#06b6d4" stroke-width="4" d="M32 32l6 6 12-12"/></svg>
+        <h3>Heart Rate</h3>
+        <p>Continuous monitoring with anomaly alerts.</p>
+      </div>
+      <div class="feature-card">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="none" stroke="#00f5a0" stroke-width="4" d="M12 52l10-24 10 12 10-20 10 24"/></svg>
+        <h3>Steps & Activity</h3>
+        <p>Track daily steps, activities, and trends.</p>
+      </div>
+      <div class="feature-card">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="none" stroke="#ff4dde" stroke-width="4" d="M32 4v56M4 32h56"/></svg>
+        <h3>Sleep Analysis</h3>
+        <p>Stage estimation and AI-driven tips.</p>
+      </div>
+      <div class="feature-card">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path fill="none" stroke="#06b6d4" stroke-width="4" d="M12 52l20-40 20 40"/></svg>
+        <h3>Calories</h3>
+        <p>Estimate daily calorie burn based on activity.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section id="demo" class="demo fadeUp">
+    <h2 class="neon">Live Demo</h2>
+    <div class="demo-panel">
+      <canvas id="demoChart" width="500" height="250"></canvas>
+      <div class="demo-stats">
+        <div class="stat">Heart: <span id="demoHeart">76 bpm</span></div>
+        <div class="stat">Steps: <span id="demoSteps">8500</span></div>
+        <div class="stat">Sleep: <span id="demoSleep">6.8h</span></div>
+      </div>
+      <div class="demo-buttons">
+        <button id="addSample" class="btn-secondary">Add Data</button>
+        <button id="resetDemo" class="btn-secondary">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="testimonials fadeUp">
+    <h2 class="neon">Trusted by Users</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="avatar">👩‍⚕️</div>
+        <strong>Elena R.</strong>
+        <p>SmartHealth helped me improve my sleep with practical AI tips.</p>
+      </div>
+      <div class="testimonial-card">
+        <div class="avatar">👨‍💻</div>
+        <strong>Mark D.</strong>
+        <p>Real-time heart monitoring gave peace of mind. Great UX!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact fadeUp">
+    <h2 class="neon">Contact Us</h2>
+    <form>
+      <input type="email" placeholder="Your email" required>
+      <textarea placeholder="Your message" rows="4" required></textarea>
+      <button type="button" id="sendMsg" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> SmartHealth • Privacy-first • Made with ❤️</p>
+</footer>
+
+<!-- Chatbot -->
+<div class="chatbot-widget">
+  <button class="chatbot-toggle" id="chatbotToggle">💬</button>
+  <div class="chatbot-window" id="chatbotWindow">
+    <div class="chatbot-header"><span class="chatbot-avatar">🤖</span> SmartHealth Assistant</div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="message bot">Hello! I'm your SmartHealth Assistant. Ask about features, demo, or pricing.</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="Ask a question..." autocomplete="off">
+      <button id="sendChat">Send</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
