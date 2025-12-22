@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       dy: (Math.random()-0.5)*0.5
     });
   }
+function showLink() {
+    alert("https://www.apple.com/app-store/");
+}
+
 
   function animateParticles(){
     ctx.clearRect(0,0,heroCanvas.width, heroCanvas.height);
@@ -194,3 +198,4 @@ document.addEventListener('DOMContentLoaded', () => {
   chatInput.addEventListener('keydown', (e)=>{ if(e.key==='Enter') handleSendMessage(); });
 
 });
+
